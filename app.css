@@ -1,0 +1,205 @@
+:root {
+    --primaryColor: rgb(255, 50, 50);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(170, 170, 170);
+    font-family: Poppins;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    display: none;
+    align-items: center;
+    padding: 1rem;
+    height: 100%;
+}
+
+.leaderboard {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    background-color: #fff;
+    width: 20%;
+    text-align: center;
+    border-radius: 5px;
+    height: 100%;
+    background-color: var(--primaryColor);
+    margin-right: 1rem;
+}
+
+.leaderboard .header {
+    padding: 0 .5rem .5rem .5rem ;
+}
+
+.leaderboard .header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.leaderboard .body {
+    overflow: hidden;
+    padding: 0 0 1rem 0;
+}
+
+.leaderboard .body p {
+    padding: .75rem;
+    color: #000;
+    background-color: rgba(255, 255, 255, .5);
+    font-weight: 500;
+    margin-bottom: .25rem;
+}
+
+.leaderboard .body p.last {
+    display: none;
+}
+
+.leaderboard .body p.resetLeaderboard {
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    align-self: flex-start;
+}
+
+.main .header {
+    padding: .25rem;
+    width: 100%;
+}
+
+.main .header .text span {
+    font-size: 1.1rem;
+}
+
+.main .header .text span.benar {
+    background-color: #3cff3c;
+}
+
+.main .header .text span.benardikit {
+    background-color: #006500;
+
+}
+
+.main .header .text span.salah {
+    background-color: #ff7777;
+}
+
+.main .header .text span.salahdikit {
+    background-color: red;
+}
+
+.main .header .content {
+    padding: .75rem;
+    background-color: #fff;
+}
+
+.main .body {
+    background-color: var(--primaryColor);
+    padding: .25rem;
+    width:100%;
+    margin-top: 1rem;
+}
+
+.main .body .content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.main .body input {
+    font-family: Poppins;
+    padding: .5rem .75rem;
+    width:100%;
+    border: 1px solid transparent;
+    outline: none;
+    font-size: 1.1rem;
+}
+
+.main .body input:focus {
+    border: 1px solid transparent;
+}
+
+.main .body .waktuMundur,.reset {
+    width: 7.5%;
+    height: 100%;
+    background-color: var(--primaryColor);
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.main .body .waktuMundur p,.reset p {
+    margin: auto
+}
+
+.main .body .reset {
+    background-color: #fff;
+    color: var(--primaryColor);
+    font-weight: 500;
+    width: 10%;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.main .body .reset:hover {
+    background-color: rgba(255, 255, 255, .5);
+    color: #fff;
+}
+
+.main .footer {
+    padding: .25rem;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.main .footer .content {
+    background-color: #fff;
+    padding: .75rem;
+}
+
+.main .footer span {
+    font-weight: 600;
+}
+
+.error {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--primaryColor);
+    text-align: center;
+}
+
+.error h1 {
+    margin: auto;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.3rem;
+
+}
+
+@media (min-width: 992px) {
+    .container {
+        display: flex;
+    }
+
+    .error {
+        display: none;
+    }
+}
