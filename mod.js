@@ -311,7 +311,6 @@ input.addEventListener('mousemove', function () {
         const spanText = span[spanIndex].textContent;
         let value = event.target.value;
         input.value += spanText.split('')[spanTextIndex];
-        console.log(spanText.split('')[spanTextIndex]);
         spanTextIndex++;
         if (input.value.length > spanText.length) {
             spanIndex++;
@@ -350,7 +349,7 @@ reset.addEventListener('click', function () {
 
 const leaderboardItem = document.querySelector('.leaderboard .body');
 window.addEventListener('load', function () {
-    if (localStorage.getItem('leaderboard') == '' || localStorage.getItem('leaderboard') == '[]') {
+    if (localStorage.getItem('leaderboard') == '' || localStorage.getItem('leaderboard') == '[]' || localStorage.getItem('leaderboard') == null) {
         leaderboardItem.innerHTML = `<p>Tidak ada data</p>`;
         localStorage.setItem('leaderboard', JSON.stringify([]));
     }
